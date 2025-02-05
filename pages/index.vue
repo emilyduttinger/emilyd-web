@@ -31,7 +31,7 @@
         </div>
       </div>
       <div id="work" class="work-grid">
-        <work-card />
+        <work-card :title="'xpel'" />
         <work-card />
         <work-card />
         <work-card />
