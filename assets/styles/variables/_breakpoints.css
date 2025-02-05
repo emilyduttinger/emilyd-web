@@ -1,0 +1,9 @@
+:root {
+  --screen-xs: 540px;
+  --screen-sm: 800px;
+  --screen-md: 1050px;
+  --screen-lg: 1280px;
+  --screen-xl: 1440px;
+  --screen-xxl: 1680px;
+  --screen-xxxl: 2000px;
+}

@@ -1,0 +1,26 @@
+.btn {
+  min-width: 200px;
+  background-color: var(--background-secondary);
+  color: var(--text-secondary);
+  font-family: var(--font-family-headings);
+  font-size: 1.125rem;
+  line-height: 1;
+  padding: 1rem 1.5rem;
+  display: inline-flex;
+  gap: 0.75rem;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  border-radius: 6.25rem;
+  margin: 0;
+  transition: opacity 0.3s ease;
+
+  .icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
