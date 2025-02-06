@@ -14,20 +14,22 @@
         <div class="toolkit">
           <h2 class="heading-6">My Toolkit</h2>
           <ul class="toolkit-list unstyled-list">
-            <li class="heading-3">Vue JS</li>
-            <li class="heading-3">Nuxt JS</li>
-            <li class="heading-3">JavaScript</li>
-            <li class="heading-3">Shopify Development</li>
-            <li class="heading-3">Liquid</li>
-            <li class="heading-3">Git</li>
-            <li class="heading-3">HTML5 + CSS3</li>
-            <li class="heading-3">Sass + Less</li>
-            <li class="heading-3">Design Systems</li>
-            <li class="heading-3">Accessibility</li>
-            <li class="heading-3">UX/UI Design</li>
-            <li class="heading-3">Figma</li>
-            <li class="heading-3">Adobe Creative Suite</li>
+            <li class="heading-4">Vue JS</li>
+            <li class="heading-4">Nuxt JS</li>
+            <li class="heading-4">JavaScript</li>
+            <li class="heading-4">TypeScript</li>
+            <li class="heading-4">Shopify Development</li>
+            <li class="heading-4">Liquid</li>
+            <li class="heading-4">Git</li>
+            <li class="heading-4">HTML5 + CSS3</li>
+            <li class="heading-4">Sass + Less</li>
+            <li class="heading-4">Design Systems</li>
+            <li class="heading-4">Accessibility</li>
+            <li class="heading-4">UX/UI Design</li>
+            <li class="heading-4">Figma</li>
+            <li class="heading-4">Adobe Creative Suite</li>
           </ul>
+          <p class="learning"><underline-svg>Currently Learning</underline-svg> &nbsp;&nbsp;&mdash;&nbsp;&nbsp; React<span>/</span>Shopify Hydrogen + Oxygen</p>
         </div>
       </div>
       <div id="work" class="work-grid">
@@ -50,6 +52,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    .btn {
+      margin-top: var(--heading-margin);
+    }
   }
 
   .intro-text {
@@ -60,14 +66,36 @@
     margin-top: var(--stacked-component-lg);
   }
 
-  .toolkit-list li {
-    display: inline-block;
+  .toolkit-list {
+    margin-bottom: var(--gap-vertical);
+
+    li {
+      display: inline-block;
+      margin: 0;
+      line-height: 1.7em;
+
+      &:not(:last-child):after {
+        content: '/';
+        display: inline-block;
+        margin: 0 1rem;
+      }
+
+      @media (min-width: 1024px) {
+        font-size: 2rem;
+      }
+    }
   }
 
-  .toolkit-list li:not(:last-child):after {
-    content: '/';
-    display: inline-block;
-    margin: 0 1rem;
+  .learning {
+    font-weight: 700;
+
+    .underline-text {
+      padding-bottom: 0.1em;
+    }
+
+    span {
+      margin: 0 0.5rem;
+    }
   }
 
   .work-grid {
