@@ -87,12 +87,6 @@
   }
 
   .learning {
-    font-weight: 700;
-
-    .underline-text {
-      padding-bottom: 0.1em;
-    }
-
     span {
       margin: 0 0.5rem;
     }
