@@ -1,20 +1,191 @@
 <template>
   <div class="work-card">
-    <card-image
-      class="card-image"
-      :image-src="'/images/torus-desktop.jpg'"
-      :alt-text="'Torus website on laptop screen'"
-    />
+    <a class="card-image-link unstyled-link" :href="url" target="_blank">
+      <card-image
+        class="card-image"
+        :image-src="imageSrc"
+        :alt-text="imageAlt || ''"
+      />
+      <div class="hover-content">
+        <base-button
+          v-if="url"
+          :render-div="true"
+        >
+          Visit Website
+        </base-button>
+        <span v-else class="heading-4">Coming Soon</span>
+        <div class="tags">
+          <span class="heading-6 tag">Vue 3</span>
+          <span class="heading-6 tag">Nuxt 3</span>
+          <span class="heading-6 tag">Headless</span>
+        </div>
+      </div>
+    </a>
     <div class="card-content">
-      <h3 class="title">Torus</h3>
+      <div class="card-title">
+        <h3 class="title">{{ title }}</h3>
+        <base-button
+          v-if="url"
+          :link-path="url"
+          :external-link="true"
+          theme="secondary"
+        >
+          Visit Website
+        </base-button>
+      </div>
+      <div class="card-table">
+        <div class="row">
+          <p class="heading-6">Details</p>
+          <p>{{ details }}</p>
+        </div>
+      </div>
     </div>
   </div>
 </template>
+
+<script setup>
+  defineProps({
+    /**
+     * Image Src
+     */
+    imageSrc: {
+      type: String,
+      default: ''
+    },
+    /**
+     * Image Alt Text
+     */
+    imageAlt: {
+      type: String,
+      default: ''
+    },
+    /**
+     * Title
+     */
+    title: {
+      type: String,
+      default: ''
+    },
+    /**
+     * Details
+     */
+    details: {
+      type: String,
+      default: ''
+    },
+    /**
+     * Project Role
+     */
+    role: {
+      type: String,
+      default: ''
+    },
+    /**
+     * Website URL
+     */
+    url: {
+      type: String,
+      default: ''
+    },
+    /**
+     * Website URL
+     */
+    tags: {
+      type: Array,
+      default: () => []
+    }
+  });
+</script>
 
 <style scoped>
   .work-card {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+  }
+
+  .card-image-link {
+    position: relative;
+    text-decoration: none;
+    color: var(--text-primary);
+
+    .card-image {
+      transition: opacity .3s cubic-bezier(.455,.03,.515,.955);
+    }
+
+    .hover-content {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: opacity 0.3s cubic-bezier(.455,.03,.515,.955);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      backdrop-filter: blur(2px);
+    }
+
+    &:hover, &:focus-visible {
+      .hover-content {
+        opacity: 1;
+      }
+
+      .card-image {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .tags {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding: 1rem;
+
+    .tag {
+      padding: 0.5rem 0.75rem;
+      margin: 0;
+      background-color: var(--background-primary);
+      color: var(--text-primary);
+      display: flex;
+      align-items: center;
+      border-radius: 2rem;
+      font-size: 0.875rem;
+    }
+  }
+
+  .card-title {
+    display: flex;
+    gap: 1rem;
+
+    @media (min-width: 600px) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  .card-table {
+    border-top: 1px solid var(--text-primary);
+    margin-top: 1.5rem;
+
+    .row {
+      display: flex;
+      padding: 1rem 0;
+      border-bottom: 1px solid var(--text-primary);
+
+      p:first-child {
+        width: 30%;
+      }
+
+      p:last-child {
+        width: 70%;
+      }
+    }
   }
 </style>

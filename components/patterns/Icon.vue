@@ -1,6 +1,6 @@
 <template>
   <inline-svg
-    class="icon"
+    :class="'icon'"
     :src="iconSrc"
     :aria-hidden="!title"
     :role="!title ? 'img' : null"

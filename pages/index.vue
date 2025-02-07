@@ -7,6 +7,8 @@
           <p class="large">Hi, I'm Emily Duttinger. I'm a <underline-svg>Front-End UI Developer</underline-svg> specializing in creating engaging and accessible web experiences. I'm a firm believer in the power of design systems to create scalable and consistent user interfaces.</p>
           <base-button
             :link-path="'#work'"
+            :icon-path="'/svg/arrow-down.svg'"
+            class="icon-arrow-down"
           >
             View My Work
           </base-button>
@@ -32,11 +34,22 @@
           <p class="learning"><underline-svg>Currently Learning</underline-svg> &nbsp;&nbsp;&mdash;&nbsp;&nbsp; React<span>/</span>Shopify Hydrogen + Oxygen</p>
         </div>
       </div>
+    </container>
+    <container :full-width="true">
       <div id="work" class="work-grid">
-        <work-card :title="'xpel'" />
-        <work-card />
-        <work-card />
-        <work-card />
+        <work-card 
+          :title="'XPEL'" 
+          :image-src="'/images/torus-desktop.jpg'"
+          :details="'A headless e-commerce platform powered by Vue 3 and Nuxt 3. Integrated with BigCommerce and Contentstack for robust product management and content delivery.'"
+          :role="'Lead UI Developer, Technical Director'"
+        />
+        <work-card 
+          :title="'Torus'" 
+          :image-src="'/images/torus-desktop.jpg'"
+          :url="'https://torus.co'"
+          :details="'An expansive modular design system with a flexible library of components that adapts to evolving content needs. Built on a headless architecture using Vue 3, Nuxt 3 and Dato CMS.'"
+          :role="'Lead UI Developer, Technical Director'"
+        />
       </div>
     </container>
   </div>

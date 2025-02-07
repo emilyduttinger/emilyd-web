@@ -59,6 +59,10 @@ p {
   line-height: 1.7em;
   margin: 0;
 
+  &.small {
+    font-size: 0.875rem;
+  }
+
   &.large {
     font-size: 1.25rem;
   }
@@ -72,7 +76,7 @@ p {
   }
 }
 
-a:not(.btn) {
+a:not(.btn):not(.unstyled-link) {
   font-size: 1rem;
   line-height: 1.7em;
   color: var(--text-primary);

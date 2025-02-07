@@ -1,7 +1,7 @@
 <template>
   <component 
     :is="componentType" 
-    class="btn"
+    :class="['btn', `btn-${theme}`]"
     v-bind="btnLinkProps"
     @click="clickHandler"
   >
@@ -9,14 +9,22 @@
       <slot />
     </span>
     <icon
+      v-if="showIcon"
       class="icon"
-      :icon-src="'/svg/arrow-down.svg'"
+      :icon-src="iconPath"
     />
   </component>
 </template>
 
 <script setup>
   const props = defineProps({
+    /**
+     * Button theme
+     */
+    theme: {
+      type: String,
+      default: 'primary'
+    },
     /**
      * Path to follow on click.  Renders a link element instead of button
      */
@@ -43,8 +51,15 @@
      */
     iconPath: {
       type: String,
-      default: '/svg/arrow-down.svg'
+      default: '/svg/arrow-right.svg'
     },
+    /**
+     * Whether to render a div instead of a button or anchor
+     */
+    renderDiv: {
+      type: Boolean,
+      default: false
+    }
   })
 
   // Computed Properties
@@ -55,6 +70,8 @@
         return 'a';
       }
       return resolveComponent('nuxt-link');
+    } else if (props.renderDiv) {
+      return 'div';
     }
 
     return 'button';

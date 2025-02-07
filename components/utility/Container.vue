@@ -21,7 +21,7 @@
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
-    max-width: var(--container-width);
+    max-width: calc(var(--container-width) + var(--container-padding) * 2);
     padding-right: var(--container-padding);
     padding-left: var(--container-padding);
 
