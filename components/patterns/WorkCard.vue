@@ -22,21 +22,22 @@
       </div>
     </a>
     <div class="card-content">
-      <div class="card-title">
-        <h3 class="title">{{ title }}</h3>
-        <base-button
-          v-if="url"
-          :link-path="url"
-          :external-link="true"
-          theme="secondary"
-        >
-          Visit Website
-        </base-button>
-      </div>
+      <h3 class="card-title">{{ title }}</h3>
       <div class="card-table">
+        <div class="row">
+          <p class="heading-6">URL</p>
+          <p>
+            <a v-if="url" :href="url" target="_blank"><strong>{{ url.replace('https://',"") }}</strong></a>
+            <span v-else>Coming Soon</span>
+          </p>
+        </div>
         <div class="row">
           <p class="heading-6">Details</p>
           <p>{{ details }}</p>
+        </div>
+        <div class="row">
+          <p class="heading-6">Role</p>
+          <p>{{ role }}</p>
         </div>
       </div>
     </div>
@@ -160,31 +161,34 @@
   }
 
   .card-title {
-    display: flex;
-    gap: 1rem;
-
-    @media (min-width: 600px) {
-      flex-direction: row;
-      align-items: center;
-      justify-content: space-between;
-    }
+    margin-bottom: 0;
   }
 
   .card-table {
-    border-top: 1px solid var(--text-primary);
+    border-top: 1px solid var(--border-primary);
     margin-top: 1.5rem;
 
     .row {
       display: flex;
+      flex-direction: column;
       padding: 1rem 0;
-      border-bottom: 1px solid var(--text-primary);
+      gap: 0.75rem;
+      border-bottom: 1px solid var(--border-primary);
 
-      p:first-child {
-        width: 30%;
+      .heading-6 {
+        margin: 0;
       }
 
-      p:last-child {
-        width: 70%;
+      @media (min-width: 600px) {
+        flex-direction: row;
+
+        p:first-child {
+          width: 30%;
+        }
+
+        p:last-child {
+          width: 70%;
+        }
       }
     }
   }

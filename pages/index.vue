@@ -42,6 +42,7 @@
           :image-src="'/images/torus-desktop.jpg'"
           :details="'A headless e-commerce platform powered by Vue 3 and Nuxt 3. Integrated with BigCommerce and Contentstack for robust product management and content delivery.'"
           :role="'Lead UI Developer, Technical Director'"
+          :tags="['Vue 3', 'Nuxt 3', 'Headless']"
         />
         <work-card 
           :title="'Torus'" 
@@ -49,6 +50,23 @@
           :url="'https://torus.co'"
           :details="'An expansive modular design system with a flexible library of components that adapts to evolving content needs. Built on a headless architecture using Vue 3, Nuxt 3 and Dato CMS.'"
           :role="'Lead UI Developer, Technical Director'"
+          :tags="['Vue 3', 'Nuxt 3', 'Headless']"
+        />
+        <work-card 
+          :title="'MATCH Pewter'" 
+          :image-src="'/images/torus-desktop.jpg'"
+          :url="'https://match1995.com'"
+          :details="'An elevated e-commerce experience with a composable design system built on Shopify 2.0, resulting in a 58% year-over-year revenue growth and a 48% increase in conversion rates.'"
+          :role="'Lead UI Developer, Technical Director'"
+          :tags="['Shopify']"
+        />
+        <work-card 
+          :title="'Great Lakes Wellness'" 
+          :image-src="'/images/torus-desktop.jpg'"
+          :url="'https://greatlakeswellness.com'"
+          :details="'An elevated e-commerce experience with a composable design system built on Shopify 2.0, resulting in a 58% year-over-year revenue growth and a 48% increase in conversion rates.'"
+          :role="'Lead UI Developer, Technical Director'"
+          :tags="['Shopify']"
         />
       </div>
     </container>
@@ -111,12 +129,12 @@
     gap: 1.5rem;
     padding-top: var(--stacked-component-lg);
 
-    @media (min-width: 767px) {
+    @media (min-width: 800px) {
       grid-template-columns: 1fr 1fr;
     }
 
     @media (min-width: 1024px) {
-      gap: 3rem;
+      gap: 3.5rem;
     }
   }
 </style>
