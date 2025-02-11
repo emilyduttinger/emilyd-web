@@ -2,7 +2,10 @@
   <div class="index">
     <container>
       <div class="intro">
-        <div class="intro-text">
+        <div 
+          ref="introText" 
+          :class="['intro-text', {'fade-in': introTextInView}]"
+        >
           <h1>I build user-focused websites with a passion for clean code and elegant design</h1>
           <p class="large">Hi, I'm Emily Duttinger. I'm a <strong>Front-End UI Developer</strong> specializing in creating engaging and accessible web experiences. I'm a firm believer in the power of design systems to create scalable and consistent user interfaces.</p>
           <base-button
@@ -13,7 +16,10 @@
             View My Work
           </base-button>
         </div>
-        <div class="toolkit">
+        <div 
+          ref="toolkit" 
+          :class="['toolkit', {'fade-in': toolkitTextInView}]"
+        >
           <h2 class="heading-6">My Toolkit</h2>
           <ul class="toolkit-list unstyled-list">
             <li class="heading-4">Vue JS</li>
@@ -105,8 +111,36 @@
   </div>
 </template>
 
+<script setup>
+  // Template Refs
+  const introText = ref(null);
+  const toolkit = ref(null);
+  const introTextInView = ref(false);
+  const toolkitTextInView = ref(false);
+
+  // Intersection observer for intro text animation
+  useIntersectionObserver(
+    introText,
+    ([{ isIntersecting }]) => {
+      introTextInView.value = isIntersecting;
+    },
+    { threshold: 0.0 }
+  );
+
+  // Intersection observer for toolkit text animation
+  useIntersectionObserver(
+    toolkit,
+    ([{ isIntersecting }]) => {
+      toolkitTextInView.value = isIntersecting;
+    },
+    { threshold: 0.0 }
+  );
+</script>
+
 <style scoped>
   .index {
+    --animation-cubic: cubic-bezier(0.58, 0.3, 0.005, 1);
+
     padding: var(--stacked-component-lg) 0;
   }
 
@@ -123,10 +157,29 @@
 
   .intro-text {
     max-width: 80ch;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s var(--animation-cubic), transform 0.4s var(--animation-cubic);
+
+    &.fade-in {
+      opacity: 1;
+      transform: none;
+      filter: none;
+    }
   }
 
   .toolkit {
     margin-top: var(--stacked-component-lg);
+    opacity: 0;
+    transition: opacity 0.4s var(--animation-cubic);
+
+    @media (min-width: 1600px) {
+      transition-delay: 0.5s;
+    }
+
+    &.fade-in {
+      opacity: 1;
+    }
   }
 
   .toolkit-list {
@@ -158,14 +211,11 @@
   .work-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 3rem;
     padding-top: var(--stacked-component-lg);
 
-    @media (min-width: 800px) {
-      grid-template-columns: 1fr 1fr;
-    }
-
     @media (min-width: 1024px) {
+      grid-template-columns: 1fr 1fr;
       gap: 3.5rem;
     }
   }

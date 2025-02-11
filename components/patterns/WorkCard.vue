@@ -1,5 +1,8 @@
 <template>
-  <div class="work-card">
+  <div 
+    ref="workCard"
+    :class="['work-card', {'fade-in': fadeCard}]"
+  >
     <a class="card-image-link unstyled-link" :href="urlArray.length > 0 ? urlArray[0] : url" target="_blank">
       <card-media
         class="card-image"
@@ -15,16 +18,15 @@
           Visit Website
         </base-button>
         <span v-else class="heading-4">Coming Soon</span>
-        <div class="tags">
-
-          <span 
-            v-for="(tag, index) in tags"
-            :key="`tag-${index}`"
-            class="heading-6 tag"
-          >
-            {{ tag }}
-          </span>
-        </div>
+      </div>
+      <div class="tags">
+        <span 
+          v-for="(tag, index) in tags"
+          :key="`tag-${index}`"
+          class="heading-6 tag"
+        >
+          {{ tag }}
+        </span>
       </div>
     </a>
     <div class="card-content">
@@ -125,6 +127,19 @@
       default: () => []
     }
   });
+
+  // Template Refs
+  const workCard = ref(null);
+  const fadeCard = ref(false);
+
+  // Intersection observer for card fade-in animation
+  useIntersectionObserver(
+    workCard,
+    ([{ isIntersecting }]) => {
+      fadeCard.value = isIntersecting;
+    },
+    { threshold: 0.0 }
+  );
 </script>
 
 <style scoped>
@@ -132,6 +147,13 @@
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: opacity 0.3s ease-in 0.2s;
+
+    &.fade-in {
+      opacity: 1;
+    }
   }
 
   .card-image-link {

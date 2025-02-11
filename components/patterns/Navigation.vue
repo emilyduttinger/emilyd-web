@@ -1,8 +1,8 @@
 <template>
   <ul class="unstyled-list navigation-menu">
     <li><a href="">resume</a></li>
-    <li><a href="">github</a></li>
-    <li><a href="">linkedin</a></li>
+    <li><a href="https://github.com/emilyduttinger" target="_blank">github</a></li>
+    <li><a href="https://www.linkedin.com/in/emily-duttinger-2882a765/" target="_blank">linkedin</a></li>
     <li><a href="mailto:emilyduttinger@gmail.com">email</a></li>
   </ul>
 </template>
