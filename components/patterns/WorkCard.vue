@@ -1,23 +1,29 @@
 <template>
   <div class="work-card">
-    <a class="card-image-link unstyled-link" :href="url" target="_blank">
-      <card-image
+    <a class="card-image-link unstyled-link" :href="urlArray.length > 0 ? urlArray[0] : url" target="_blank">
+      <card-media
         class="card-image"
         :image-src="imageSrc"
+        :video-url="videoUrl"
         :alt-text="imageAlt || ''"
       />
       <div class="hover-content">
         <base-button
-          v-if="url"
+          v-if="url || urlArray.length > 0"
           :render-div="true"
         >
           Visit Website
         </base-button>
         <span v-else class="heading-4">Coming Soon</span>
         <div class="tags">
-          <span class="heading-6 tag">Vue 3</span>
-          <span class="heading-6 tag">Nuxt 3</span>
-          <span class="heading-6 tag">Headless</span>
+
+          <span 
+            v-for="(tag, index) in tags"
+            :key="`tag-${index}`"
+            class="heading-6 tag"
+          >
+            {{ tag }}
+          </span>
         </div>
       </div>
     </a>
@@ -25,8 +31,17 @@
       <h3 class="card-title">{{ title }}</h3>
       <div class="card-table">
         <div class="row">
-          <p class="heading-6">URL</p>
-          <p>
+          <p v-if="urlArray.length > 0" class="heading-6">URLs</p>
+          <p v-else class="heading-6">URL</p>
+          <ul v-if="urlArray.length > 0" class="url-list">
+            <li 
+              v-for="(item, index) in urlArray"
+              :key="`url-${index}`"
+            >
+              <a :href="item" target="_blank"><strong>{{ item.replace('https://',"") }}</strong></a>
+            </li>
+          </ul>
+          <p v-else>
             <a v-if="url" :href="url" target="_blank"><strong>{{ url.replace('https://',"") }}</strong></a>
             <span v-else>Coming Soon</span>
           </p>
@@ -61,6 +76,13 @@
       default: ''
     },
     /**
+     * URL to an mp4 video to autoplay or embed
+     */
+    videoUrl: {
+      type: String,
+      default: ''
+    },
+    /**
      * Title
      */
     title: {
@@ -87,6 +109,13 @@
     url: {
       type: String,
       default: ''
+    },
+    /**
+     * Array of URLs to link to multple pages or sites
+     */
+    urlArray: {
+      type: Array,
+      default: () => []
     },
     /**
      * Website URL
@@ -189,6 +218,20 @@
         p:last-child {
           width: 70%;
         }
+      }
+    }
+  }
+
+  .url-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin: 0;
+
+      & + li {
+        margin-top: 0.25rem;
       }
     }
   }
