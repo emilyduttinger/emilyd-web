@@ -84,7 +84,7 @@
         />
         <work-card 
           :title="'Charming Group'" 
-          :image-src="'/images/torus-desktop.jpg'"
+          :image-src="'/images/charming-group.jpg'"
           :url="'https://charminggroup.com'"
           :details="'A headless web application built with Vue 2 and Nuxt 2, featuring engaging animations powered by GSAP.'"
           :role="'Lead UI Developer'"

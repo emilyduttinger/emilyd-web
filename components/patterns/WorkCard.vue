@@ -163,6 +163,10 @@
 
     .card-image {
       transition: opacity .3s cubic-bezier(.455,.03,.515,.955);
+
+      :deep(img) {
+        display: block;
+      }
     }
 
     .hover-content {
@@ -254,7 +258,7 @@
       margin: 0;
 
       & + li {
-        margin-top: 0.25rem;
+        margin-top: 0.5rem;
       }
     }
   }
