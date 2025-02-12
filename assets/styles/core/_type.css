@@ -81,10 +81,10 @@ a:not(.btn):not(.unstyled-link) {
   line-height: 1.7em;
   color: var(--text-primary);
   text-decoration: none;
-  padding-bottom: 3px;
+  padding-bottom: 2px;
   position: relative;
   background-image: linear-gradient(#fff 50%, rgba(255, 255, 255, 0) 50%);
-  background-size: 100% 3px;
+  background-size: 100% 2px;
   background-position: 100% 100%;
   background-repeat: no-repeat;
   display: inline-block;
@@ -111,20 +111,20 @@ a:not(.btn):not(.unstyled-link) {
 
 @keyframes underline-hover {
   0% {
-    background-size: 100% 3px;
+    background-size: 100% 2px;
     background-position: 100% 100%;
   }
 
   50% {
-      background-size: 0 3px;
+      background-size: 0 2px;
       background-position: 100% 100%;
   }
   50.01% {
-      background-size: 0 3px;
+      background-size: 0 2px;
       background-position: 0% 100%;
   }
   100% {
-      background-size: 100% 3px;
+      background-size: 100% 2px;
       background-position: 0% 100%;
   }
 }

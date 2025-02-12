@@ -41,11 +41,19 @@
         </div>
       </div>
     </container>
+    <div class="intro-video">
+      <video-player
+        class="intro-video-player"
+        :video-url="'video/rainbow-bg-hero.mp4'"
+        :display-icons="false"
+      />
+    </div>
     <container :full-width="true">
       <div id="work" class="work-grid">
         <work-card 
           :title="'XPEL'" 
           :image-src="'/images/torus-desktop.jpg'"
+          :url="'https://xpel.com'"
           :details="'A headless e-commerce platform powered by Vue 3 and Nuxt 3. Integrated with BigCommerce and Contentstack for robust product management and content delivery.'"
           :role="'Lead UI Developer, Technical Director'"
           :tags="['Vue 3', 'Nuxt 3', 'Headless']"
@@ -68,7 +76,7 @@
         />
         <work-card 
           :title="'Great Lakes Wellness'" 
-          :image-src="'/images/torus-desktop.jpg'"
+          :image-src="'/images/glw-home.jpg'"
           :url="'https://greatlakeswellness.com'"
           :details="'A custom theme with a versatile design system and a rich component library built on Shopify 2.0.'"
           :role="'Lead UI Developer, Technical Director'"
@@ -142,6 +150,36 @@
     --animation-cubic: cubic-bezier(0.58, 0.3, 0.005, 1);
 
     padding: var(--stacked-component-lg) 0;
+  }
+
+  .intro-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;
+
+    &:before {
+      content: '';
+      width: 100%;
+      height: 40vh;
+      background-image: linear-gradient(to top, var(--background-primary), transparent);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    .intro-video-player {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      opacity: 0.4;
+    }
   }
 
   .intro {

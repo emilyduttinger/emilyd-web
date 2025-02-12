@@ -40,11 +40,11 @@
               v-for="(item, index) in urlArray"
               :key="`url-${index}`"
             >
-              <a :href="item" target="_blank"><strong>{{ item.replace('https://',"") }}</strong></a>
+              <a :href="item" target="_blank">{{ item.replace('https://',"") }}</a>
             </li>
           </ul>
           <p v-else>
-            <a v-if="url" :href="url" target="_blank"><strong>{{ url.replace('https://',"") }}</strong></a>
+            <a v-if="url" :href="url" target="_blank">{{ url.replace('https://',"") }}</a>
             <span v-else>Coming Soon</span>
           </p>
         </div>
@@ -202,7 +202,8 @@
     .tag {
       padding: 0.5rem 0.75rem;
       margin: 0;
-      background-color: var(--background-primary);
+      background-color: rgba(0,0,0,0.3);
+      backdrop-filter: blur(10px);
       color: var(--text-primary);
       display: flex;
       align-items: center;
