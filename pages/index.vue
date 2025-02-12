@@ -52,7 +52,7 @@
       <div id="work" class="work-grid">
         <work-card 
           :title="'XPEL'" 
-          :image-src="'/images/torus-desktop.jpg'"
+          :video-url="'/video/xpel-home.mp4'"
           :url="'https://xpel.com'"
           :details="'A headless e-commerce platform powered by Vue 3 and Nuxt 3. Integrated with BigCommerce and Contentstack for robust product management and content delivery.'"
           :role="'Lead UI Developer, Technical Director'"
