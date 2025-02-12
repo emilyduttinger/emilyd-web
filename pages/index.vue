@@ -100,7 +100,7 @@
         />
         <work-card 
           :title="'Yeti Cycles'" 
-          :image-src="'/images/torus-desktop.jpg'"
+          :video-url="'/video/yeti-desktop.mp4'"
           :url-array="['https://yeticycles.com/technology/sixfinity', 'https://yeticycles.com/technology/switch-infinity','https://yeticycles.com/technology', ]"
           :details="'An immersive web experience featuring rich GSAP and Vue animations, including scroll-driven video. Built on a headless architecture using Vue 2, Nuxt 2, BigCommerce and Prismic CMS.'"
           :role="'Component + Animation UI Development'"
