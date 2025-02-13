@@ -183,13 +183,15 @@
       backdrop-filter: blur(2px);
     }
 
-    &:hover, &:focus-visible {
-      .hover-content {
-        opacity: 1;
-      }
+    @media (min-width: 800px) {
+      &:hover, &:focus-visible {
+        .hover-content {
+          opacity: 1;
+        }
 
-      .card-image {
-        opacity: 0.7;
+        .card-image {
+          opacity: 0.7;
+        }
       }
     }
   }
