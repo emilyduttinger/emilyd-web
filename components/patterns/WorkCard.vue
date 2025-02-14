@@ -202,11 +202,11 @@
     left: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: 0.5rem;
+    gap: 0.25rem;
     padding: 1rem;
 
     .tag {
-      padding: 0.5rem 0.75rem;
+      padding: 0.25rem 0.5rem;
       margin: 0;
       background-color: rgba(0,0,0,0.3);
       backdrop-filter: blur(10px);
@@ -214,7 +214,16 @@
       display: flex;
       align-items: center;
       border-radius: 2rem;
-      font-size: 0.875rem;
+      font-size: 0.75rem;
+    }
+
+    @media (min-width: 600px){
+      gap: 0.5rem;
+
+      .tag {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.875rem;
+      }
     }
   }
 

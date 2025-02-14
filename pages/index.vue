@@ -33,11 +33,12 @@
             <li class="heading-4">Sass + Less</li>
             <li class="heading-4">Design Systems</li>
             <li class="heading-4">Accessibility</li>
+            <li class="heading-4">Animation</li>
             <li class="heading-4">UX/UI Design</li>
             <li class="heading-4">Figma</li>
             <li class="heading-4">Adobe Creative Suite</li>
           </ul>
-          <p class="learning"><strong>Currently Learning</strong> &nbsp;&nbsp;&mdash;&nbsp;&nbsp; Shopify Hydrogen + Oxygen</p>
+          <p class="learning"><strong>Currently Learning</strong> &nbsp;&nbsp;&mdash;&nbsp;&nbsp; React<span>/</span>Shopify Hydrogen + Oxygen</p>
         </div>
       </div>
     </container>
