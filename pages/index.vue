@@ -6,8 +6,8 @@
           ref="introText" 
           :class="['intro-text', {'fade-in': introTextInView}]"
         >
-          <h1>I build user-focused websites with a passion for clean code and elegant design</h1>
-          <p class="large">Hi, I'm Emily Duttinger. I'm a <strong>Front-End UI Developer</strong> specializing in creating engaging and accessible web experiences. I'm a firm believer in the power of design systems to create scalable and consistent user interfaces.</p>
+          <h1>I build user-focused applications with a passion for clean code and elegant design</h1>
+          <p class="large">Hi, I'm Emily Duttinger. I'm a <strong>Front-End UI/UX Engineer</strong> specializing in creating engaging and accessible web experiences. I'm a firm believer in the power of design systems to create scalable and consistent user interfaces.</p>
           <base-button
             :link-path="'#work'"
             :icon-path="'/svg/arrow-down.svg'"
@@ -22,15 +22,18 @@
         >
           <h2 class="heading-6">My Toolkit</h2>
           <ul class="toolkit-list unstyled-list">
-            <li class="heading-4">Vue JS</li>
-            <li class="heading-4">Nuxt JS</li>
+            <li class="heading-4">Vue.js</li>
+            <li class="heading-4">Nuxt.js</li>
             <li class="heading-4">JavaScript</li>
             <li class="heading-4">TypeScript</li>
-            <li class="heading-4">Shopify Development</li>
-            <li class="heading-4">Liquid</li>
-            <li class="heading-4">Git</li>
             <li class="heading-4">HTML5 + CSS3</li>
             <li class="heading-4">Sass + Less</li>
+            <li class="heading-4">Liquid</li>
+            <li class="heading-4">GraphQL</li>
+            <li class="heading-4">Git</li>
+            <li class="heading-4">NPM</li>
+            <li class="heading-4">Yarn</li>
+            <li class="heading-4">Shopify Development</li>
             <li class="heading-4">Design Systems</li>
             <li class="heading-4">Accessibility</li>
             <li class="heading-4">Animation</li>
@@ -57,7 +60,7 @@
           :url="'https://xpel.com'"
           :details="'A headless e-commerce platform powered by Vue 3 and Nuxt 3. Integrated with BigCommerce and Contentstack for robust product management and content delivery.'"
           :role="'Lead UI Developer, Technical Director'"
-          :tags="['Vue 3', 'Nuxt 3', 'Headless']"
+          :tags="['Vue', 'Nuxt', 'Headless', 'Animation']"
         />
         <work-card 
           :title="'Torus'" 
@@ -65,7 +68,15 @@
           :url="'https://torus.co'"
           :details="'An expansive modular design system with a flexible library of components that adapts to evolving content needs. Built on a headless architecture using Vue 3, Nuxt 3 and Dato CMS.'"
           :role="'Lead UI Developer, Technical Director'"
-          :tags="['Vue 3', 'Nuxt 3', 'Headless']"
+          :tags="['Vue', 'Nuxt', 'Headless']"
+        />
+        <work-card 
+          :title="'Charming Group'" 
+          :image-src="'/images/charming-group.jpg'"
+          :url="'https://charminggroup.com'"
+          :details="'A headless web application built with Vue 2 and Nuxt 2, featuring engaging animations powered by GSAP.'"
+          :role="'Lead UI Developer'"
+          :tags="['Vue', 'Nuxt', 'Headless', 'Animation', 'GSAP']"
         />
         <work-card 
           :title="'MATCH Pewter'" 
@@ -84,14 +95,6 @@
           :tags="['Shopify']"
         />
         <work-card 
-          :title="'Charming Group'" 
-          :image-src="'/images/charming-group.jpg'"
-          :url="'https://charminggroup.com'"
-          :details="'A headless web application built with Vue 2 and Nuxt 2, featuring engaging animations powered by GSAP.'"
-          :role="'Lead UI Developer'"
-          :tags="['Vue 2', 'Nuxt 2', 'Headless', 'GSAP']"
-        />
-        <work-card 
           :title="'Howler Brothers'" 
           :video-url="'/video/Howler.mp4'"
           :url="'https://howlerbros.com'"
@@ -105,7 +108,7 @@
           :url-array="['https://yeticycles.com/technology/sixfinity', 'https://yeticycles.com/technology/switch-infinity','https://yeticycles.com/technology', ]"
           :details="'An immersive web experience featuring rich GSAP and Vue animations, including scroll-driven video. Built on a headless architecture using Vue 2, Nuxt 2, BigCommerce and Prismic CMS.'"
           :role="'Component + Animation UI Development'"
-          :tags="['Vue 2', 'Nuxt 2', 'Headless', 'GSAP']"
+          :tags="['Vue', 'Nuxt', 'Headless', 'Animation', 'GSAP']"
         />
         <work-card 
           :title="'WS Development'" 
