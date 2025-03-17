@@ -7,7 +7,7 @@
           :class="['intro-text', {'fade-in': introTextInView}]"
         >
           <h1>I build user-focused applications with a passion for clean code and elegant design</h1>
-          <p class="large">Hi, I'm Emily Duttinger. I'm a <strong>Front-End UI/UX Engineer</strong> specializing in creating engaging and accessible web experiences. I'm a firm believer in the power of design systems to create scalable and consistent user interfaces.</p>
+          <p class="large">Hi, I'm Emily Duttinger. I'm a <strong>Frontend UI/UX Engineer</strong> specializing in creating engaging and accessible web experiences. I'm a firm believer in the power of design systems to create scalable and consistent user interfaces.</p>
           <base-button
             :link-path="'#work'"
             :icon-path="'/svg/arrow-down.svg'"
