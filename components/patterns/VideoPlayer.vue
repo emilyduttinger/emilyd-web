@@ -17,7 +17,7 @@
           class="icon"
           :icon-src="pauseIconSrc"
         />
-        <zr-icon
+        <icon
           v-else-if="!isPlaying"
           class="icon"
           :icon-src="playIconSrc"

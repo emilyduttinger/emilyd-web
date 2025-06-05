@@ -26,6 +26,7 @@
             <li class="heading-4">Nuxt.js</li>
             <li class="heading-4">JavaScript</li>
             <li class="heading-4">TypeScript</li>
+            <li class="heading-4">React</li>
             <li class="heading-4">HTML5 + CSS3</li>
             <li class="heading-4">Sass + Less</li>
             <li class="heading-4">Liquid</li>
@@ -40,8 +41,9 @@
             <li class="heading-4">UX/UI Design</li>
             <li class="heading-4">Figma</li>
             <li class="heading-4">Adobe Creative Suite</li>
+            <li class="heading-4">Cursor</li>
+            <li class="heading-4">Copilot</li>
           </ul>
-          <p class="learning"><strong>Currently Learning</strong> &nbsp;&nbsp;&mdash;&nbsp;&nbsp; React<span>/</span>Shopify Hydrogen + Oxygen</p>
         </div>
       </div>
     </container>
