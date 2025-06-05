@@ -6,7 +6,7 @@
       :data-src="imageSrc"
       :src="defaultImage"
       :alt="altText"
-      :class="[imageClass, { 'fade-image': fade }]"
+      :class="{ 'fade-image': fade }"
       :style="fadeStyle"
     >
     <img
