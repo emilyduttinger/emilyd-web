@@ -1,6 +1,6 @@
 <template>
   <header>
-    <span class="heading-3 logo-heading">EmilyD</span>
+    <span class="heading-3 logo-heading">Emily Duttinger</span>
     <navigation />
   </header>
 </template>

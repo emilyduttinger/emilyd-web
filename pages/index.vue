@@ -60,7 +60,7 @@
           :title="'XPEL'" 
           :video-url="'/video/xpel-home.mp4'"
           :url="'https://xpel.com'"
-          :details="'A headless e-commerce platform powered by Vue 3 and Nuxt 3. Integrated with BigCommerce and Contentstack for robust product management and content delivery.'"
+          :details="'A headless e-commerce platform powered by Vue.js and Nuxt.js. Integrated with BigCommerce and Contentstack for robust product management and content delivery.'"
           :role="'Lead UI Developer, Technical Director'"
           :tags="['Vue', 'Nuxt', 'Headless', 'Animation']"
         />
@@ -68,7 +68,7 @@
           :title="'Torus'" 
           :image-src="'/images/torus-desktop.jpg'"
           :url="'https://torus.co'"
-          :details="'An expansive modular design system with a flexible library of components that adapts to evolving content needs. Built on a headless architecture using Vue 3, Nuxt 3 and Dato CMS.'"
+          :details="'An expansive modular design system with a flexible library of components that adapts to evolving content needs. Built on a headless architecture using Vue.js, Nuxt.js and Dato CMS.'"
           :role="'Lead UI Developer, Technical Director'"
           :tags="['Vue', 'Nuxt', 'Headless']"
         />
@@ -76,7 +76,7 @@
           :title="'Charming Group'" 
           :image-src="'/images/charming-group.jpg'"
           :url="'https://charminggroup.com'"
-          :details="'A headless web application built with Vue 2 and Nuxt 2, featuring engaging animations powered by GSAP.'"
+          :details="'A headless web application built with Vue.js and Nuxt.js, featuring engaging animations powered by GSAP.'"
           :role="'Lead UI Developer'"
           :tags="['Vue', 'Nuxt', 'Headless', 'Animation', 'GSAP']"
         />
@@ -108,7 +108,7 @@
           :title="'Yeti Cycles'" 
           :video-url="'/video/yeti-desktop.mp4'"
           :url-array="['https://yeticycles.com/technology/sixfinity', 'https://yeticycles.com/technology/switch-infinity','https://yeticycles.com/technology', ]"
-          :details="'An immersive web experience featuring rich GSAP and Vue animations, including scroll-driven video. Built on a headless architecture using Vue 2, Nuxt 2, BigCommerce and Prismic CMS.'"
+          :details="'An immersive web experience featuring rich GSAP and Vue animations, including scroll-driven video. Built on a headless architecture using Vue.js, Nuxt.js, BigCommerce and Prismic CMS.'"
           :role="'Component + Animation UI Development'"
           :tags="['Vue', 'Nuxt', 'Headless', 'Animation', 'GSAP']"
         />
@@ -156,6 +156,10 @@
     --animation-cubic: cubic-bezier(0.58, 0.3, 0.005, 1);
 
     padding: var(--stacked-component-lg) 0;
+
+    @media (max-width: 768px) {
+      padding-top: 0;
+    }
   }
 
   .intro-video {
@@ -227,7 +231,6 @@
   }
 
   .toolkit-list {
-    margin-bottom: var(--gap-vertical);
 
     li {
       display: inline-block;
