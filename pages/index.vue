@@ -7,7 +7,7 @@
           :class="['intro-text', {'fade-in': introTextInView}]"
         >
           <h1>I build user-focused applications with a passion for clean code and elegant design</h1>
-          <p class="large">Hi, I'm Emily Duttinger. I'm a <strong>Frontend UI/UX Engineer</strong> specializing in creating engaging and accessible web experiences. I'm a firm believer in the power of design systems to create scalable and consistent user interfaces.</p>
+          <p class="large">I'm a <strong>Frontend UI/UX Engineer</strong> specializing in creating engaging and accessible web experiences. I'm a firm believer in the power of design systems to create scalable and consistent user interfaces.</p>
           <base-button
             :link-path="'#work'"
             :icon-path="'/svg/arrow-down.svg'"
@@ -22,21 +22,23 @@
         >
           <h2 class="heading-6">My Toolkit</h2>
           <ul class="toolkit-list unstyled-list">
-            <li class="heading-4">Vue.js</li>
-            <li class="heading-4">Nuxt.js</li>
             <li class="heading-4">JavaScript</li>
             <li class="heading-4">TypeScript</li>
+            <li class="heading-4">Vue.js</li>
+            <li class="heading-4">Nuxt.js</li>
             <li class="heading-4">React</li>
             <li class="heading-4">HTML5 + CSS3</li>
             <li class="heading-4">Sass + Less</li>
             <li class="heading-4">Liquid</li>
+            <li class="heading-4">PHP</li>
             <li class="heading-4">GraphQL</li>
+            <li class="heading-4">REST API</li>
             <li class="heading-4">Git</li>
-            <li class="heading-4">NPM</li>
-            <li class="heading-4">Yarn</li>
-            <li class="heading-4">Shopify Development</li>
+            <li class="heading-4">Shopify Plus</li>
+            <li class="heading-4">Storybook</li>
             <li class="heading-4">Design Systems</li>
             <li class="heading-4">Accessibility</li>
+            <li class="heading-4">WCAG</li>
             <li class="heading-4">Animation</li>
             <li class="heading-4">UX/UI Design</li>
             <li class="heading-4">Figma</li>
@@ -70,7 +72,7 @@
           :url="'https://torus.co'"
           :details="'An expansive modular design system with a flexible library of components that adapts to evolving content needs. Built on a headless architecture using Vue.js, Nuxt.js and Dato CMS.'"
           :role="'Lead UI Developer, Technical Director'"
-          :tags="['Vue', 'Nuxt', 'Headless']"
+          :tags="['Vue', 'Nuxt', 'Headless', 'Animation']"
         />
         <work-card 
           :title="'Charming Group'" 
@@ -86,7 +88,7 @@
           :url="'https://match1995.com'"
           :details="'An elevated e-commerce experience with a composable design system built on Shopify 2.0, resulting in a 58% year-over-year revenue growth and a 48% increase in conversion rates.'"
           :role="'Lead UI Developer, Technical Director'"
-          :tags="['Shopify']"
+          :tags="['Shopify Plus']"
         />
         <work-card 
           :title="'Great Lakes Wellness'" 
@@ -94,7 +96,7 @@
           :url="'https://greatlakeswellness.com'"
           :details="'A custom theme with a versatile design system and a rich component library built on Shopify 2.0.'"
           :role="'Lead UI Developer, Technical Director'"
-          :tags="['Shopify']"
+          :tags="['Shopify Plus']"
         />
         <work-card 
           :title="'Howler Brothers'" 
@@ -102,12 +104,12 @@
           :url="'https://howlerbros.com'"
           :details="'A vibrant Shopify 2.0 e-commerce experience showcasing the brand\'\s unique artwork. A custom, composable design system, powered by CSS variables, ensures brand adaptability.'"
           :role="'Lead UI Developer'"
-          :tags="['Shopify']"
+          :tags="['Shopify Plus']"
         />
         <work-card 
           :title="'Yeti Cycles'" 
           :video-url="'/video/yeti-desktop.mp4'"
-          :url-array="['https://yeticycles.com/technology/sixfinity', 'https://yeticycles.com/technology/switch-infinity','https://yeticycles.com/technology', ]"
+          :url-array="['https://yeticycles.com/technology/sixfinity', 'https://yeticycles.com/technology/switch-infinity' ]"
           :details="'An immersive web experience featuring rich GSAP and Vue animations, including scroll-driven video. Built on a headless architecture using Vue.js, Nuxt.js, BigCommerce and Prismic CMS.'"
           :role="'Component + Animation UI Development'"
           :tags="['Vue', 'Nuxt', 'Headless', 'Animation', 'GSAP']"
@@ -115,10 +117,10 @@
         <work-card 
           :title="'WS Development'" 
           :image-src="'/images/ws-development_garden-city-center-home.jpg'"
-          :url-array="['https://gardencitycenter.com', 'https://thestreetchestnuthill.com', 'https://theshopsatfarmingtonvalley.com', 'https://highlandvillagejxn.com', 'https://hilldale.com']"
+          :url-array="['https://gardencitycenter.com', 'https://thestreetchestnuthill.com', 'https://theshopsatfarmingtonvalley.com', 'https://highlandvillagejxn.com', 'https://hilldale.com', 'https://bradleyfair.com']"
           :details="'WordPress multisite network of 8 websites built on a robust design system with shared components, unique branding and animations.'"
           :role="'Lead UI Developer, Technical Director'"
-          :tags="['Wordpress', 'Animation']"
+          :tags="['Wordpress', 'Animation', 'GSAP']"
         />
       </div>
     </container>
