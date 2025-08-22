@@ -75,26 +75,26 @@
           :tags="['Vue', 'Nuxt', 'Headless', 'Animation']"
         />
         <work-card 
-          :title="'Charming Group'" 
-          :image-src="'/images/charming-group.jpg'"
-          :url="'https://charminggroup.com'"
-          :details="'A headless web application built with Vue.js and Nuxt.js, featuring engaging animations powered by GSAP.'"
-          :role="'Lead UI Developer'"
+          :title="'Yeti Cycles'" 
+          :video-url="'/video/yeti-desktop.mp4'"
+          :url-array="['https://yeticycles.com/technology/sixfinity', 'https://yeticycles.com/technology/switch-infinity' ]"
+          :details="'An immersive web experience featuring rich GSAP and Vue animations, including scroll-driven video. Built on a headless architecture using Vue.js, Nuxt.js, BigCommerce and Prismic CMS.'"
+          :role="'Component + Animation UI Development'"
           :tags="['Vue', 'Nuxt', 'Headless', 'Animation', 'GSAP']"
-        />
-        <work-card 
-          :title="'MATCH Pewter'" 
-          :video-url="'/video/Match.mp4'"
-          :url="'https://match1995.com'"
-          :details="'An elevated e-commerce experience with a composable design system built on Shopify 2.0, resulting in a 58% year-over-year revenue growth and a 48% increase in conversion rates.'"
-          :role="'Lead UI Developer, Technical Director'"
-          :tags="['Shopify Plus']"
         />
         <work-card 
           :title="'Great Lakes Wellness'" 
           :image-src="'/images/glw-home.jpg'"
           :url="'https://greatlakeswellness.com'"
           :details="'A custom theme with a versatile design system and a rich component library built on Shopify 2.0.'"
+          :role="'Lead UI Developer, Technical Director'"
+          :tags="['Shopify Plus']"
+        />
+        <work-card 
+          :title="'MATCH Pewter'" 
+          :video-url="'/video/Match.mp4'"
+          :url="'https://match1995.com'"
+          :details="'An elevated e-commerce experience with a composable design system built on Shopify 2.0, resulting in a 58% year-over-year revenue growth and a 48% increase in conversion rates.'"
           :role="'Lead UI Developer, Technical Director'"
           :tags="['Shopify Plus']"
         />
@@ -107,20 +107,20 @@
           :tags="['Shopify Plus']"
         />
         <work-card 
-          :title="'Yeti Cycles'" 
-          :video-url="'/video/yeti-desktop.mp4'"
-          :url-array="['https://yeticycles.com/technology/sixfinity', 'https://yeticycles.com/technology/switch-infinity' ]"
-          :details="'An immersive web experience featuring rich GSAP and Vue animations, including scroll-driven video. Built on a headless architecture using Vue.js, Nuxt.js, BigCommerce and Prismic CMS.'"
-          :role="'Component + Animation UI Development'"
-          :tags="['Vue', 'Nuxt', 'Headless', 'Animation', 'GSAP']"
-        />
-        <work-card 
           :title="'WS Development'" 
           :image-src="'/images/ws-development_garden-city-center-home.jpg'"
           :url-array="['https://gardencitycenter.com', 'https://thestreetchestnuthill.com', 'https://theshopsatfarmingtonvalley.com', 'https://highlandvillagejxn.com', 'https://hilldale.com', 'https://bradleyfair.com']"
           :details="'WordPress multisite network of 8 websites built on a robust design system with shared components, unique branding and animations.'"
           :role="'Lead UI Developer, Technical Director'"
           :tags="['Wordpress', 'Animation', 'GSAP']"
+        />
+        <work-card 
+          :title="'Charming Group'" 
+          :image-src="'/images/charming-group.jpg'"
+          :url="'https://charminggroup.com'"
+          :details="'A headless web application built with Vue.js and Nuxt.js, featuring engaging animations powered by GSAP.'"
+          :role="'Lead UI Developer'"
+          :tags="['Vue', 'Nuxt', 'Headless', 'Animation', 'GSAP']"
         />
       </div>
     </container>
